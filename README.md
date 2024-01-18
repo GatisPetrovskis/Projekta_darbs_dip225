@@ -8,7 +8,9 @@ Tas atvieglotu šo lēno uzdevumu, ja būtu visi dati par konkrētām sporta nod
 ## Projekta uzdevums
 Projekta uzdevums ir izstrādāt Python programmatūru, kas ar tīmekļa skrāpēšanas palīdzību spētu no RTU sporta centra nodarbību kalendāra pieteikumu mājaslapas "https://www.rtu.lv/lv/sports/sporta-nodarbibas/pieteikties-nodarbibam" nolasītu - no paša lietotāja, pēc izvēles ievadītu - informāciju, kā datumu, laiku, adresi un pieteikušos dalībnieku skaitu līdz visiem sporta notikumiem līdz nākamās nedēļas beigām. Tālāk šo visu informāciju apvienotu Excel tabulā, pārskatāmā veidā.
 ## Izmantotās bibliotēkas
-![alt text]()
+![alt text](bib.png)
+
+
 ## Izmantošanas metodes
 
 
