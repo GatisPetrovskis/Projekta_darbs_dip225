@@ -16,6 +16,8 @@ driver.get(url)
 time.sleep(3)
 sikfaili = driver.find_element(By.XPATH, '/html/body/div[16]/div/div/div/div/div[2]/a[1]')
 sikfaili.click()
+poga = driver.find_element(By.XPATH, '//*[@id="unibit_modal_popup"]/div/div/div/div/div[1]')
+poga.click()
 time.sleep(1)
 
 linki = []
@@ -27,6 +29,12 @@ for x in find:
 
 for elem in linki:
     driver.get(elem)
-    time.sleep(3)
-    adrese = driver.find_element(By.XPATH, "/html/body/div[14]/div/div/div[2]/div[1]/div/table/tbody/tr[5]/td/a").get_attribute("innerText")
-    print(adrese)
+    time.sleep(2)
+    final = []
+    tabula = driver.find_element(By.TAG_NAME, "tbody").get_attribute("innerText")
+    splited = tabula.rstrip().replace("\t", "").split("\n")
+    for x in splited:
+        vertiba = x.split(":", 1)
+        for y in vertiba:
+            final.append(y)
+    print(final)
