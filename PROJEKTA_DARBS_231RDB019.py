@@ -16,7 +16,7 @@ saite = f"https://www.rtu.lv/lv/sports/sporta-nodarbibas/pieteikties-nodarbibam?
 
 def lietotaja_ievade():
     while True:
-        ievade = input("Ievadiet sporta nodarbību Piemēram - Volejbols, Basketbols, Joga , Peldēšana")
+        ievade = input("Ievadiet sporta nodarbību Piemēram - Volejbols, Basketbols, Joga , Peldēšana: ")
         if (not ievade):
             print("Ievadiet vertību vēlreiz: ")
         else:
