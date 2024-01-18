@@ -6,11 +6,11 @@ Sports ir liela daļa no daudzu studentu ikdienas un RTU sporta centrs piedāvā
 Bieži sanāk meklēt cauri nodarbību kalendāram un meklēt laikus un brīvas vietas, kādi ir pieejami.
 Tas atvieglotu šo lēno uzdevumu, ja būtu visi dati par konkrētām sporta nodarbībām savākti pārskatāmi vienuviet.
 ## Projekta uzdevums
-Projekta uzdevums ir izstrādāt Python programmatūru, kas ar tīmekļa skrāpēšanas palīdzību spētu no RTU sporta centra nodarbību kalendāra pieteikumu mājaslapas "https://www.rtu.lv/lv/sports/sporta-nodarbibas/pieteikties-nodarbibam" nolasītu - no paša lietotāja, pēc izvēles ievadītu - informāciju, kā datumu, laiku, adresi un pieteikušos dalībnieku skaitu līdz visiem sporta notikumiem līdz nākamās nedēļas beigām. Tālāk šo visu informāciju apvienotu Excel tabulā, pārskatāmā veidā.
+Projekta uzdevums ir izstrādāt Python programmatūru, kas ar tīmekļa skrāpēšanas palīdzību spētu automātiski no RTU sporta centra nodarbību kalendāra pieteikumu mājaslapas "https://www.rtu.lv/lv/sports/sporta-nodarbibas/pieteikties-nodarbibam" nolasīt - no paša lietotāja, pēc izvēles ievadīta notikuma - informāciju, kā datumu, laiku, adresi un pieteikušos dalībnieku skaitu visiem sporta notikumiem līdz nākamās nedēļas beigām. Tālāk šo visu informāciju apvienotu Excel tabulā, pārskatāmā veidā.
 ## Izmantotās bibliotēkas
 ![alt text](bib.png)
-
-
+1. Selenium. Šī bibliotēka tika izmantota, lai varētu veikt automatizētu tīmekļa skrāpēšanu. Selenium webdriver ar selenium.webdriver.chrome.service ir vissvarīgākā daļa no bibliotēkas, kas atver un kontrolē interneta pārlūka "Google Chrome" logu, lai spētu veikt darbības tajā, kā nospiest pogas vai lai nolasītu informāciju no mājaslapas. Vēl tiek izmantota selenium.webdriver.common.by klase ar, kuras palīdzību tiek meklēti elementi HTML mājaslapas kodā. Visbeidzot selenium.common.exceptions klase ļauj tikt galā ar izņēmumiem, kas rodas, gadījumā, ja meklētais elements mājaslapā netiek atrasts.
+2. 
 ## Izmantošanas metodes
 
 
