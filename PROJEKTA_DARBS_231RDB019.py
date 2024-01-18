@@ -16,9 +16,9 @@ saite = f"https://www.rtu.lv/lv/sports/sporta-nodarbibas/pieteikties-nodarbibam?
 
 def lietotaja_ievade():
     while True:
-        ievade = input("Ievadiet sportu: ")
+        ievade = input("Ievadiet sporta nodarbību Piemēram - Volejbols, Basketbols, Joga , Peldēšana")
         if (not ievade):
-            print("Ievadiet vertību: ")
+            print("Ievadiet vertību vēlreiz: ")
         else:
             break 
     return ievade
@@ -78,16 +78,18 @@ def iegust_tabulas(linki):
     return tabulas
 
 def excel_datne(tabulas, sports):
-    df = pd.concat(tabulas, ignore_index=True)
-    df.index = df.index + 1
-    if 'Dalībnieku skaits' in df.columns and df["Dalībnieku skaits"].isnull().values.any() == False:
-        df['Dalībnieku skaits'] = df['Dalībnieku skaits'].astype('int')
-    if 'Maksimālais dalībnieku skaits' in df.columns and df["Maksimālais dalībnieku skaits"].isnull().values.any() == False:
-        df['Maksimālais dalībnieku skaits'] = df['Maksimālais dalībnieku skaits'].astype('int')
-    if 'Minimālais dalībnieku skaits' in df.columns and df["Minimālais dalībnieku skaits"].isnull().values.any() == False:
-        df['Minimālais dalībnieku skaits'] = df['Minimālais dalībnieku skaits'].astype('int')
-    df.to_excel(f"{sports}.xlsx")
-
+    if len(tabulas) > 0:
+        df = pd.concat(tabulas, ignore_index=True)
+        df.index = df.index + 1
+        if 'Dalībnieku skaits' in df.columns and df["Dalībnieku skaits"].isnull().values.any() == False:
+            df['Dalībnieku skaits'] = df['Dalībnieku skaits'].astype('int')
+        if 'Maksimālais dalībnieku skaits' in df.columns and df["Maksimālais dalībnieku skaits"].isnull().values.any() == False:
+            df['Maksimālais dalībnieku skaits'] = df['Maksimālais dalībnieku skaits'].astype('int')
+        if 'Minimālais dalībnieku skaits' in df.columns and df["Minimālais dalībnieku skaits"].isnull().values.any() == False:
+            df['Minimālais dalībnieku skaits'] = df['Minimālais dalībnieku skaits'].astype('int')
+        df.to_excel(f"{sports}.xlsx")
+    else:
+        print("Nevarēja atrast atbilstošus notikumus ievadītajam, mēģiniet vēlreiz")
 majaslapas = saites(sports, saite)
 tabulas = iegust_tabulas(majaslapas)
 excel_datne(tabulas, sports)
