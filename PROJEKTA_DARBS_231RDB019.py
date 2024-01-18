@@ -27,6 +27,20 @@ for x in find:
     value = x.get_attribute("innerText")
     if "Volejbols" in value and "RTU darbiniekiem" not in value:
         linki.append(x.get_attribute("href"))
+
+nakama_nedela = driver.find_elements(By.TAG_NAME, "button")
+for nakama in nakama_nedela:
+    if  "fc-next-button" in nakama.get_attribute("class"):
+        nakama.click()
+        break
+time.sleep(1)
+
+find_2 = driver.find_elements(By.TAG_NAME, "a")
+for x in find_2:
+    value = x.get_attribute("innerText")
+    if "Basketbols" in value and "RTU darbiniekiem" not in value:
+        linki.append(x.get_attribute("href"))
+        
 tabulas = []
 for elem in linki:
     driver.get(elem)
